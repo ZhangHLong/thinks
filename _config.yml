@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://www.hrsstd.com
+url:
 date_format: "ordinal"
 title: 琅嬛玉洞
 subtitle: "格言：最重要的事情只有一件"

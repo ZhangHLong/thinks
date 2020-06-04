@@ -10,9 +10,10 @@ keywords: Redis, 事务
 redis 事务略有别于传统数据库的事务行为（begin、commit、rollback），redis事务指令：multi（开启事务 ）、exec（执行事务）、discard（丢弃事务）
 ### 1、Redis 事务原理
 **原理**：
-所有指令在执行exec 之前都是先发送到事务到缓存队列，服务器收到exec 指令才会开始执行事务队列，执行完毕一次性返回所有结果，因为单线程的原因，所以这个操作过程是"原子行为""
+所有指令在执行exec 之前都是先发送到事务到缓存队列，服务器收到exec 指令才会开始执行事务队列，执行完毕一次性返回所有结果，因为单线程的原因，所以这个操作过程是"原子行为".
 
- <img src="/images/posts/redis/redis-transactional.jpg" alt="redis multi" />
+<img src="/images/posts/redis/redis-transactional.png"   />
+
 
 **事务执行过程**：
 ```$xslt
